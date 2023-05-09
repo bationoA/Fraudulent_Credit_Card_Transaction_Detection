@@ -1,15 +1,3 @@
-<style>
-    NOTE: These css did not work
-.max_val {
-    background-color: #729FCF  /* Fade blue */ 
-    }
-    
-.min_val {
-    background-color: #B2B2B2  /* silver */ 
-    color: green
-    }
-</style>
-
 # Credit Card Fraud Detection
 
 ![Features selection](rsc/img/hack-g13414caf4_1920.jpg)
@@ -109,18 +97,13 @@ __Figure 3__: Features selection
 
 
 ### 5. Model Selection
-There are several algorithms than can be used in our situation to train a classification model. Among there there.
+There are several algorithms than can be used in our situation to train a classification model. For this case study We’ll restrict our choice to Logistic Regression, Support Vector Machines, Decision Tree and Random Forest.
 
-* Logistic Regression:
-* Support Vector Machines:
-* Tree-based algorithms such as Decision Tree and Random Forest: These algorithms are known for their ability to handle imbalanced data better than others such as logistic regression or support vector machines.
-* Deep Learning:
-* Logistic regression, support vector machines, and decision trees are sensitive to outliers in the training data. Outliers can have a significant impact on the decision boundary, and hence on the classification results, especially for algorithms that rely on the distance between data points, such as SVM. In logistic regression and decision trees, outliers can affect the model coefficients and the splitting criteria, respectively, leading to biased or unstable models. Therefore, it is important to handle outliers appropriately before or during training to improve the performance and stability of these algorithms.
-* Robust methods: Some machine learning algorithms, such as random forests and support vector machines, are naturally robust to outliers. Using these algorithms can be an effective way to handle outliers in the data.
-* Ensemble methods: Ensemble methods like bagging and boosting can also help handle outliers by averaging or combining the predictions of multiple models. This can help reduce the impact of outliers on the overall performance of the model.
+Logistic regression, support vector machines, and decision trees are sensitive to outliers in the training data. Outliers can have a significant impact on the decision boundary, and hence on the classification results, especially for algorithms that rely on the distance between data points, such as SVM. In logistic regression and decision trees, outliers can affect the model coefficients, leading to biased or unstable models. Therefore, it is important to handle outliers appropriately before or during training to improve the performance and stability of these algorithms.
 
-For this case study We’ll restrict our choice to Logistic Regression, Support Vector Machines, Decision Tree and Random Forest. The fact that the dataset is highly unbalanced makes the use of accuracy measure irrelevant. Therefore we will focus on measures such as Area under cover (AUC), precision, recall, and f1-score. 
+Some machine learning algorithms, such as random forests and support vector machines, are naturally robust to outliers. Using these algorithms can be an effective way to handle outliers in the data. Ensemble methods like bagging and boosting can also help handle outliers by averaging or combining the predictions of multiple models. This can help reduce the impact of outliers on the overall performance of the model.
 
+The fact that the dataset is highly unbalanced makes the use of accuracy measure irrelevant. Therefore we will focus on measures such as Area under cover (AUC), precision, recall, and f1-score. 
 
 ### 6. Model training and evaluation
 The quality of datasets and their distribution play an important role when its comes to training a model. This even more important when data dataset is highly imbalanced as the one we’re dealing with.  Even if there are training algorithms that can handle this such datasets there are still some common methods to address imbalanced data.  
@@ -240,7 +223,7 @@ __Table 1__: Models Performance
 </table>
 
 
-__Figure 3__: Models Performance Comparison
+__Figure 4__: Models Performance Comparison
 ![Models Performance Comparison](outputs/images/Models_Performance_Comparison.png)
 
 
@@ -264,5 +247,6 @@ Many factors, even if mentionned previously, have not been takken into account w
 
 * Synthetic Minority Oversampling Technique (SMOTE): It is a method to address class imbalance problems in machine learning. SMOTE technique generates synthetic samples for the minority class (here fradulent transactions) by interpolating between the existing samples, thus increasing the representation of the minority class in the dataset. Even if it is not guaranteed, it has been shown to improve the performance of many classifiers
 * Remove or transform outliers and retrain models that are sensitive to outliers
+* Try ensemble methods such as bagging and boosting
 * Consider using Neural Network too
 
