@@ -20,8 +20,6 @@ The main objective of this project is to develop a machine learning model that c
 
 * Model Training and Evaluation: We will train and evaluate different machine learning algorithms to identify the most suitable model for fraud detection. Evaluation metrics such as accuracy, precision, recall, and F1-score will be used to assess model performance.
 
-* Model Deployment: The selected model will be deployed to predict fraud in real-time scenarios. We will explore ways to integrate the model into a production environment or create an API for easy accessibility.
-
 ## Getting Started
 
 To get started with this project, follow the steps below:
